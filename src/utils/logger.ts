@@ -9,7 +9,11 @@ function formatLogEntry(entry: Entry, level = "INFO") {
 }
 
 export function logInfo(message: string) {
-  fs.appendFileSync("bootstrap_cli.log", formatLogEntry(message), "utf8");
+  return fs.appendFileSync(
+    "bootstrap_cli.log",
+    formatLogEntry(message),
+    "utf8",
+  );
 }
 
 export function logWarn(message: string) {

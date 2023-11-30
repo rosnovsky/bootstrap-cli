@@ -37,6 +37,9 @@ devDependencies:
   '@types/inquirer':
     specifier: ^9.0.7
     version: 9.0.7
+  '@types/mock-fs':
+    specifier: ^4.13.4
+    version: 4.13.4
   commitizen:
     specifier: ^4.3.0
     version: 4.3.0(typescript@5.3.2)
@@ -49,6 +52,9 @@ devDependencies:
   lint-staged:
     specifier: ^15.1.0
     version: 15.1.0
+  mock-fs:
+    specifier: ^5.2.0
+    version: 5.2.0
   prettier:
     specifier: 3.1.0
     version: 3.1.0
@@ -419,6 +425,12 @@ packages:
 
   /@types/minimist@1.2.5:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
+    dev: true
+
+  /@types/mock-fs@4.13.4:
+    resolution: {integrity: sha512-mXmM0o6lULPI8z3XNnQCpL0BGxPwx1Ul1wXYEPBGl4efShyxW2Rln0JOPEWGyZaYZMM6OVXM/15zUuFMY52ljg==}
+    dependencies:
+      '@types/node': 18.18.12
     dev: true
 
   /@types/node@18.18.12:
@@ -1992,6 +2004,11 @@ packages:
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    dev: true
+
+  /mock-fs@5.2.0:
+    resolution: {integrity: sha512-2dF2R6YMSZbpip1V1WHKGLNjr/k48uQClqMVb5H3MOvwc9qhYis3/IWbj02qIg/Y8MDXKFF4c5v0rxx2o6xTZw==}
+    engines: {node: '>=12.0.0'}
     dev: true
 
   /modify-values@1.0.1:
