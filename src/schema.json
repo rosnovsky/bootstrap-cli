@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "web",
+              "cli",
+              "library"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "install": {
+            "type": "string"
+          },
+          "update": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "type",
+          "description",
+          "url",
+          "repository"
+        ]
+      },
+      "additionalProperties": false
+    },
+    "additionalProperties": false
+  },
+  "required": [
+    "version",
+    "applications"
+  ],
+  "additionalProperties": false
+}

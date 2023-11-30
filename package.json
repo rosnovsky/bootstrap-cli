@@ -1,0 +1,53 @@
+{
+  "name": "bootstrap",
+  "version": "0.0.0",
+  "description": "A new computer bootstrap CLI",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.5.0"
+  },
+  "engineStrict": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"Warning: no build specified\" && exit 0",
+    "commit": "cz",
+    "release": "standard-version",
+    "prepare": "husky install",
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Art Rosnovsky <art@rosnovsky.us>",
+  "license": "ISC",
+  "private": true,
+  "repository": {
+    "url": "https://...",
+    "type": "git"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.12",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/figlet": "^1.5.8",
+    "@types/inquirer": "^9.0.7",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "3.1.0",
+    "standard-version": "^9.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
