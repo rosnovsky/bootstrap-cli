@@ -6,8 +6,10 @@ import { installSoftware } from "./utils/installSoftware.js";
 import { checkForUpdates, performUpdates } from "./utils/checkForUpdates.js";
 import { logError } from "./utils/logger.js";
 import { Action } from "./types.js";
+import { asciiLaptop } from "./ascii_laptop.js";
 
 console.log(
+  chalk.yellowBright(asciiLaptop),
   chalk.blueBright(figlet.textSync("Bootstrap", { horizontalLayout: "full" })),
 );
 
@@ -73,7 +75,7 @@ async function handleActionResponse(response: Action) {
         break;
     }
   } catch (error) {
-    logError("Unexpected error occurred in handleActionResponse", error);
+    logError("Unexpected error occurred in handleActionResponse", <Error>error);
     console.log(
       chalk.red(
         "An unexpected error occurred. Please check the logs for more details.",

@@ -10,12 +10,13 @@ export async function checkForUpdates(yamlConfig: Configuration) {
       console.log(`Checking for updates for ${chalk.cyan(software.name)}...`);
       if (software.update) {
         const updateCheckOutput = await executeShellCommand(software.update);
-        if (updateCheckOutput.includes(software.updateAvailableString)) {
+        // TODO: This is cursed 👇 Not sure how to properly check for updates yet.
+        if (updateCheckOutput.includes(software.update)) {
           updatesAvailable.push(software);
         }
       }
     } catch (error) {
-      logError(`Error checking for updates for ${software.name}`, error);
+      logError(`Error checking for updates for ${software.name}`, <Error>error);
     }
   }
   logInfo("Update check completed.");
@@ -31,7 +32,7 @@ export async function performUpdates(softwareList: Software[]) {
         `${chalk.green(software.name)} has been updated successfully.`,
       );
     } catch (error) {
-      logError(`Error updating ${software.name}`, error);
+      logError(`Error updating ${software.name}`, <Error>error);
     }
   }
   logInfo("Updates have been installed.");

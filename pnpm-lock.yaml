@@ -52,6 +52,9 @@ devDependencies:
   standard-version:
     specifier: ^9.5.0
     version: 9.5.0
+  typescript:
+    specifier: ^5.3.2
+    version: 5.3.2
 
 packages:
 
